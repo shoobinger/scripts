@@ -1,0 +1,13 @@
+#!/usr/bin/bash
+
+if [[ $1 == "disable" ]]; then
+    bspc config top_monocle_padding 0
+    bspc config bottom_monocle_padding 0
+    bspc config left_monocle_padding 0
+    bspc config right_monocle_padding 0
+else
+    bspc config top_monocle_padding 100
+    bspc config bottom_monocle_padding 100
+    bspc config left_monocle_padding 300
+    bspc config right_monocle_padding 300
+fi
