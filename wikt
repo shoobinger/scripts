@@ -18,6 +18,4 @@ fi
 word=`echo "$input" | sed 's/[,.!; "—\(\)]//g'`
 # Open a link
 xdg-open "$WIKTIONARY_URL/$word"
-
-# Focus the opened link container
 i3-msg "[class=$BROWSER_WINDOW_CLASS] focus" >/dev/null

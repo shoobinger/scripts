@@ -1,0 +1,5 @@
+#!/bin/sh
+(
+ trap - SIGINT
+ exec /bin/bash /usr/bin/idea
+) & 
