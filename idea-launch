@@ -1,5 +1,8 @@
-#!/bin/sh
-(
- trap - SIGINT
- exec /bin/bash /usr/bin/idea
-) & 
+#!/usr/bin/env perl
+
+# Enables stopping launched processes in IDEA with SIGINT.
+
+$SIG{INT} = 'DEFAULT';
+$SIG{TERM} = 'DEFAULT';
+
+exec "/usr/share/idea/bin/idea.sh";
