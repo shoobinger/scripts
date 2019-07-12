@@ -8,5 +8,7 @@ TARGET_DIRS="Books Video"
 
 inotifywait -m --format "%w%f" -e close_write $SOURCE_DIR --exclude "\.part$" | while read path; do
     TARGET_DIR=$(find $TARGET_DIRS -maxdepth 0 -type d | sed -e "s/\.\///g" | dmenu -p "Download destination:")
-    mv "$path" "$HOME/$TARGET_DIR"
+    if [ -n "$TARGET_DIR" ]; then
+        mv "$path" "$HOME/$TARGET_DIR"
+    fi
 done
