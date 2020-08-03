@@ -1,4 +1,0 @@
-#!/bin/sh
-
-wego -f json | jq -r '"+\(.Current.TempC | round)°C"'
-
