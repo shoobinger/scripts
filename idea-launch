@@ -5,4 +5,4 @@
 $SIG{INT} = 'DEFAULT';
 $SIG{TERM} = 'DEFAULT';
 
-exec "/usr/share/idea/bin/idea.sh";
+exec "/usr/share/jetbrains-idea-ce/bin/idea.sh";
