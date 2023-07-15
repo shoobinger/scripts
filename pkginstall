@@ -3,4 +3,5 @@
 # Prompts user to select and install package(s) using AUR wrapper.
 
 PACKAGE=$(yay -Pc | fzf -m --preview 'yay -Si {1}' | cut -f1 -)
+if [ "$PACKAGE" = "" ]; then exit; fi
 yay -S $PACKAGE
